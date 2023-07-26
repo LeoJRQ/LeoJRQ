@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <title>Checkbox Exemplo</title>
+</head>
+<body>
+    <h1>Grade na Hora SAEBB</h1>
+    <div class="group-checkbox" data-group="seg">
+        <h3>Segunda-feira</h3>
+        <label for="segunda1">
+            <input type="checkbox" id="segunda1" name="segunda" value="1" start="9" end="10" atividade="Abertura da SAEBB - 09:00h/10:00h">
+            Abertura da SAEBB<br>
+        </label>
+        <label for="segunda2">
+            <input type="checkbox" id="segunda2" name="segunda" value="2" start="10.5" end="12" atividade="Palestra CREA - 10:30h/12:00h">
+            Palestra CREA<br>
+        </label>
+        <label for="segunda3">
+            <input type="checkbox" id="segunda3" name="segunda" value="3" start="13.5" end="15" atividade="Acidentes de trânsito: o engenheiro atuando na área forense - 13:30h/15:00h">
+            Acidentes de trânsito: o engenheiro atuando na área forense - Profº Mário<br>
+        </label>
+        <label for="segunda4">
+            <input type="checkbox" id="segunda4" name="segunda" value="4" start="15.5" end="18" atividade="drug Discovery - 15:30h/18:00h">
+            drug Discovery<br>
+        </label>
+        <label for="segunda5">
+            <input type="checkbox" id="segunda5" name="segunda" value="5" start="15.5" end="17.5" atividade="Lá e de volta outra vez, os probióticos em medicina e biotecnologia - 15:30h/17:30h">
+            Lá e de volta outra vez, os probióticos em medicina e biotecnologia - Marcos Pileggi<br>
+        </label>
+    </div>
+    <br>
+    <div class="group-checkbox" data-group="ter">
+        <h3>Terça-feira</h3>
+        <label for="terça1">
+            <input type="checkbox" id="terça1" name="terça" value="6" start="9" end="10" atividade="Desafios da sustentabilidade para o setor produtivo - 09:00h/10:00h">
+            Desafios da sustentabilidade para o setor produtivo - Daniel Poletto<br>
+        </label>
+        <label for="terça2">
+            <input type="checkbox" id="terça2" name="terça" value="7" start="10.5" end="12"atividade="Desafios da sustentabilidade para o setor produtivo - 10:30h/12:00h">
+            Desafios da sustentabilidade para o setor produtivo<br>
+        </label>
+        <label for="terça3">
+            <input type="checkbox" id="terça3" name="terça" value="8" start="10.5" end="12" atividade="Impressão 3D - 10:30h/12:00h">
+            Impressão 3D<br>
+        </label>
+        <label for="terça4">
+            <input type="checkbox" id="terça4" name="terça" value="9" start="13.5" end="15" atividade="Marcadores moleculares na pecuária - 13:30h/15:00h">
+            Marcadores moleculares na pecuária<br>
+        </label>
+        <label for="terça5">
+            <input type="checkbox" id="terça5" name="terça" value="10" start="13.5" end="15" atividade="b5 - 13:30h/15:00h">
+            b5 - Guilherme<br>
+        </label>
+        <label for="terça6">
+            <input type="checkbox" id="terça6" name="terça" value="11" start="12" end="18" atividade="Visita técnicada LCD - 12:00h/18:00h">
+            Visita técnicada LCD<br>
+        </label>
+        <label for="terça7">
+            <input type="checkbox" id="terça7" name="terça" value="12" start="15.5" end="17.5" atividade="b7 - 15:30h/17:30h">
+            b7 - Guilherme<br>
+        </label>
+    </div>
+    <br>
+    <div class="group-checkbox" data-group="qua">
+        <h3>Quarta-feira</h3>
+        <label for="quarta1">
+            <input type="checkbox" id="quarta1" name="quarta" value="13" start="8" end="12" atividade="Visita técnica Porto Brazos - 08:00h/12:00h">
+            Visita técnica Porto Brazos<br>
+        </label>
+        <label for="quarta2">
+            <input type="checkbox" id="quarta2" name="quarta" value="14" start="8" end="12" atividade="Visita técnica Heineken - 08:00h/12:00h">
+            Visita técnica Heineken<br>
+        </label>
+        <label for="quarta3">
+            <input type="checkbox" id="quarta3" name="quarta" value="15" start="8.5" end="10" atividade="c3 - 08:30h/10:00h">
+            c3 - Fernando<br>
+        </label>
+        <label for="quarta4">
+            <input type="checkbox" id="quarta4" name="quarta" value="16" start="9" end="10" atividade="Métodos de preservação de M.O. - 09:00h/10:00h">
+            Métodos de preservação de M.O.<br>
+        </label>
+        <label for="quarta5">
+            <input type="checkbox" id="quarta5" name="quarta" value="17" start="10.5" end="12" atividade="c5 - 10:30h/12:00h">
+            c5 - Fernando<br>
+        </label>
+        <label for="quarta6">
+            <input type="checkbox" id="quarta6" name="quarta" value="18" start="10.5" end="12" atividade="Métodos de preservação de M.O. - 10:30h/12:00h">
+            Métodos de preservação de M.O.<br>
+        </label>
+        <label for="quarta7">
+            <input type="checkbox" id="quarta7" name="quarta" value="19" start="12" end="18" atividade="Visita Técnica Curytiba Biotec - 12:00h/18:00h">
+            Visita Técnica Curytiba Biotec<br>
+        </label>
+        <label for="quarta8">
+            <input type="checkbox" id="quarta8" name="quarta" value="20" start="13.5" end="15.5" atividade="Visita Técnica Tetra Pak - 13:30h/15:30h">
+            Visita Técnica Tetra Pak<br>
+        </label>
+        <label for="quarta9">
+            <input type="checkbox" id="quarta9" name="quarta" value="21" start="13.5" end="15" atividade="Micropropagação vegetativa de mudas de batata e produção de minituberculos em sistema aeropônico - 13:30h/15:00h">
+            Micropropagação vegetativa de mudas de batata e produção de minituberculos em sistema aeropônico<br>
+        </label>
+    </div>
+    <br>
+    <div class="group-checkbox" data-group="qui">
+        <h3>Quinta-feira</h3>
+        <label for="quinta1">
+            <input type="checkbox" id="quinta1" name="quinta" value="22" start="8.5" end="11" atividade="Visita Técnica Frísia Moinho de Trigo - 08:30h/11:00h">
+            Visita Técnica Frísia Moinho de Trigo<br>
+        </label>
+        <label for="quinta2">
+            <input type="checkbox" id="quinta2" name="quinta" value="23" start="10.5" end="12" atividade="d2 - 10:30h/12:00h">
+            d2 <br> Izabelle<br>
+        </label>
+        <label for="quinta3">
+            <input type="checkbox" id="quinta3" name="quinta" value="24" start="13.5" end="15" atividade="UTPrimers - 13:30h/15:00h">
+            UTPrimers<br>
+        </label>
+        <label for="quinta4">
+            <input type="checkbox" id="quinta4" name="quinta" value="25" start="13.5" end="15" atividade="d4 - 13:30h/15:00h">
+            d4 <br> Izabelle<br>
+        </label>
+        <label for="quinta5">
+            <input type="checkbox" id="quinta5" name="quinta" value="26" start="13.5" end="15" atividade="Minicurso cerveja - 13:30h/15:00h">
+            Minicurso cerveja<br>
+        </label>
+        <label for="quinta6">
+            <input type="checkbox" id="quinta6" name="quinta" value="27" start="15.5" end="17.5" atividade="UTPrimers - 15:30h/17:30h">
+            UTPrimers<br>
+        </label>
+        <label for="quinta7">
+            <input type="checkbox" id="quinta7" name="quinta" value="28" start="15.5" end="17.5" atividade="Roda de conversa estágio - 15:30h/17:30h">
+            Roda de conversa estágio<br>
+        </label>
+        <label for="quinta8">
+            <input type="checkbox" id="quinta8" name="quinta" value="29" start="15.5" end="17.5" atividade="Minicurso cerveja - 15:30h/17:30h">
+            Minicurso cerveja<br>
+        </label>
+    </div>
+    <br>    
+    <div class="group-checkbox" data-group="sex">
+        <h3>Sexta-feira</h3>
+        <label for="sexta1">
+            <input type="checkbox" id="sexta1" name="sexta" value="30" start="8" end="15.5" atividade="Visita técnica Klabin e Parque Ecológico - 08:00h/15:30h (saída às 05:50h)">
+            Visita técnica Klabin e Parque Ecológico<br>
+        </label>
+        <label for="sexta2">
+            <input type="checkbox" id="sexta2" name="sexta" value="31" start="8.5" end="10" atividade="Toxicologia. Porque os maiores venenos estão nos menores frascos! - 08:30h/10:00h">
+            Toxicologia. Porque os maiores venenos estão nos menores frascos!<br>
+        </label>
+        <label for="sexta3">
+            <input type="checkbox" id="sexta3" name="sexta" value="32" start="10.5" end="12" atividade="Toxicologia. Porque os maiores venenos estão nos menores frascos! - 10:30h/12:00h">
+            Toxicologia. Porque os maiores venenos estão nos menores frascos!<br>
+        </label>
+        <label for="sexta4">
+            <input type="checkbox" id="sexta4" name="sexta" value="33" start="13.5" end="15.5" atividade="Mostra de trabalhos com momento cultural - 13:30h/15:30h">
+            Mostra de trabalhos com momento cultural<br>
+        </label>
+    </div>
+    <button type="button" onclick="gerar()" id="gerador">Gerar PDF</button>
+</body>
+</html>
