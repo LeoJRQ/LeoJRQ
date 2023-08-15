@@ -105,3 +105,26 @@ button:active {
 		font-size: 30px;
 	}
 }
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #ddd;
+  }
+
+  th, td {
+	border: 1px solid #ddd;
+	padding: 8px;
+	text-align: center;
+  }
+
+  .group-checkbox {
+    text-align: left; 
+  }
+
+  .group-checkbox label {
+    display: block;
+    margin-bottom: 5px;
+	margin-left: 5px;
+  }
+
