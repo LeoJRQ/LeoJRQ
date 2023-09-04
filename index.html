@@ -1,165 +1,241 @@
-
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
-    <title>Grade na Hora SAEBB</title>
+    <title>Chamador de senhas</title>
 </head>
 <body>
-    <div id="menuLateral" class="menu">
-        <a href="javascript:void(0)" class="btnFechar" onclick="fecharMenu()">&times;</a>
-        <a href="https://www.instagram.com/saebbutfpr/#">Instagram</a>
-        <a href="#">Even3</a>
-        <a href="#">Patrocinadores</a>
-      </div>
-
-    <span style="font-size:30px;cursor:pointer;" class="icone" onclick="abrirMenu()">&#9776;</span>
-    <div  style="width: 80%;margin-left: 10%;">
-        <h1>Grade na Hora SAEBB</h1>
-        <table id="tabela">
-            <tr>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-            </tr>
-            <tr>
-                <td id="L1S1"></td>
-                <td id="L1T1"></td>
-                <td id="L1Q1"></td>
-                <td id="L1QT1"></td>
-                <td id="L1SEX1"></td>
-              </tr>
-              <tr>
-                <td id="L2S2"></td>
-                <td id="L2T2"></td>
-                <td id="L2Q2"></td>
-                <td id="L2QT2"></td>
-                <td id="L2SEX2"></td>
-              </tr>
-
-              <tr>
-                <td id="L3S3"></td>
-                <td id="L3T3"></td>
-                <td id="L3Q3"></td>
-                <td id="L3QT3"></td>
-                <td id="L3SEX3"></td>
-              </tr>
-
-              <tr>
-                <td id="L4S4"></td>
-                <td id="L4T4"></td>
-                <td id="L4Q4"></td>
-                <td id="L4QT4"></td>
-                <td id="L4SEX4"></td>
-              </tr>
-
-              <tr>
-                <td id="L5S5"></td>
-                <td id="L5T5"></td>
-                <td id="L5Q5"></td>
-                <td id="L5QT5"></td>
-                <td id="L5SEX5"></td>
-              </tr>
-
-              <tr>
-                <td id="L6S6"></td>
-                <td id="L6T6"></td>
-                <td id="L6Q6"></td>
-                <td id="L6QT6"></td>
-                <td id="L6SEX6"></td>
-              </tr>
-
-              <tr>
-                <td id="L7S7"></td>
-                <td id="L7T7"></td>
-                <td id="L7Q7"></td>
-                <td id="L7QT7"></td>
-                <td id="L7SEX7"></td>
-              </tr>
-
-              
-              <tr>
-                <td id="L8S8"></td>
-                <td id="L8T8"></td>
-                <td id="L8Q8"></td>
-                <td id="L8QT8"></td>
-                <td id="L8SEX8"></td>
-              </tr>
-
-              
-              <tr>
-                <td id="L9S9"></td>
-                <td id="L9T9"></td>
-                <td id="L9Q9"></td>
-                <td id="L9QT9"></td>
-                <td id="L9SEX9"></td>
-              </tr>
-        </table>
-        
-        <div class="group-checkbox" data-group="seg">
-            <h3>Segunda-feira</h3>
-            <label ><input type="checkbox" id="segunda1" name="segunda1" value="1" linha="1" start="9" end="10" atividade="Abertura da SAEBB - 09:00h/10:00h" cont="0">Abertura da SAEBB - 09:00h/10:00h<br></label>
-            <label><input type="checkbox" id="segunda2" name="segunda2" value="2"  linha="2" start="10.5" end="12" atividade="Palestra CREA - 10:30h/12:00h" cont="0"> Palestra CREA - 10:30h/12:00h<br></label>
-            <label><input type="checkbox" id="segunda3" name="segunda3" value="3"  linha="3" start="13.5" end="15" atividade="Acidentes de trânsito: o engenheiro atuando na área forense - 13:30h/15:00h" cont="0">Acidentes de trânsito: o engenheiro atuando na área forense - Profº Mário - 13:30h/15:00h<br></label>
-            <label><input type="checkbox" id="segunda4" name="segunda4" value="4"  linha="4" start="15.5" end="18" atividade="drug Discovery - 15:30h/18:00h" cont="0">drug Discovery - 15:30h/18:00h<br></label>
-            <label><input type="checkbox" id="segunda5" name="segunda5" value="5"  linha="5" start="15.5" end="17.5" atividade="Lá e de volta outra vez, os probióticos em medicina e biotecnologia - 15:30h/17:30h" cont="0">Lá e de volta outra vez, os probióticos em medicina e biotecnologia - Marcos Pileggi - 15:30h/17:30h<br></label>
+    <header>
+        <h1>Chamada de Senhas</h1>
+    </header>
+    <main>
+        <div class="senha">
+            <h2>Senha</h2>
+            <h2 id="senha">S000</h2>
         </div>
-        <br>
-        <div class="group-checkbox" data-group="ter">
-            <h3>Terça-feira</h3>
-            <label><input type="checkbox" id="terça1" name="terça"  linha="1" value="6" start="8" end="12" atividade="Visita técnica AMBEV - 08:00h/12:00h (saída as 7:30h)" cont="1">Visita técnica AMBEV - 08:00h/12:00h (saída as 7:30h)<br></label>
-            <label><input type="checkbox" id="terça2" name="terça"  linha="2" value="7" start="9" end="12" atividade="Desafios da sustentabilidade para o setor produtivo - 09:00h/12:00h" cont="0">Desafios da sustentabilidade para o setor produtivo - Daniel Poletto - 09:00h/12:00h<br></label>
-            <label><input type="checkbox" id="terça3" name="terça"  linha="3" value="8" start="10.5" end="12" atividade="Impressão 3D - 10:30h/12:00h" cont="1">Impressão 3D - Matheus Postigo - 10:30h/12:00h<br></label>
-            <label><input type="checkbox" id="terça4" name="terça"  linha="4" value="9" start="13.5" end="15" atividade="Marcadores moleculares na pecuária - 13:30h/15:00h" cont="0">Marcadores moleculares na pecuária - Pamela Machado - 13:30h/15:00h<br></label>
-            <label><input type="checkbox" id="terça5" name="terça"  linha="5" value="10" start="13.5" end="15" atividade="Resolvendo problemas biotecnológicos com Machine Learning - 13:30h/15:00h" cont="1">Resolvendo problemas biotecnológicos com Machine Learning - Guilherme Kundlatsch - 13:30h/15:00h<br></label>
-            <label><input type="checkbox" id="terça6" name="terça"  linha="6" value="11" start="12" end="18" atividade="Visita técnicada LCD - 12:00h/18:00h" cont="1">Visita técnicada LCD - 12:00h/18:00h<br></label>
-            <label><input type="checkbox" id="terça7" name="terça"  linha="7" value="12" start="15.5" end="17.5" atividade="Biologia Sintética: a próxima revolução tecnológica - 15:30h/17:30h" cont="0">Biologia Sintética: a próxima revolução tecnológica - Guilherme Kundlatsch - 15:30h/17:30h<br></label>
+        <div class="atividades">
+            <table class="tabela">
+                <tr>
+                    <th>Atividade</th>
+                    <th>Dia</th>
+                    <th>Vagas Restantes</th>
+                    <th>Ação</th>
+                </tr>
+                <tr>
+                    <td>Pesquisa e Desenvolvimento de Medicamentos</td>
+                    <td>Segunda-feira</td>
+                    <td id="vagasPeD">40</td>
+                    <td><button onclick="diminuirVaga('vagasPeD')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasPeD')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Impressão 3D: conceitos e técnicas</td>
+                    <td>Terça-feira</td>
+                    <td id="vagasImpressao3D">20</td>
+                    <td><button onclick="diminuirVaga('vagasImpressao3D')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasImpressao3D')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Resolvendo problemas biotecnológicos com Machine Learning</td>
+                    <td>Terça-feira</td>
+                    <td id="vagasResolvendoProblemas">40</td>
+                    <td><button onclick="diminuirVaga('vagasResolvendoProblemas')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasResolvendoProblemas')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica AMBEV</td>
+                    <td>Terça-feira</td>
+                    <td id="vagasAMBEV">26</td>
+                    <td><button onclick="diminuirVaga('vagasAMBEV')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasAMBEV')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Louis Dreyfus Company (LDC)</td>
+                    <td>Terça-feira</td>
+                    <td id="vagasLDC">10</td>
+                    <td><button onclick="diminuirVaga('vagasLDC')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasLDC')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Porto Brazos</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasPortoBrazos">25</td>
+                    <td><button onclick="diminuirVaga('vagasPortoBrazos')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasPortoBrazos')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Heineken</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasHeineken">12</td>
+                    <td><button onclick="diminuirVaga('vagasHeineken')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasHeineken')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Introdução a visão computacional com redes neurais artificiais e Python</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasFernando">35</td>
+                    <td><button onclick="diminuirVaga('vagasFernando')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasFernando')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Métodos de Preservação Microrganismos</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasPreservacaoMO">22</td>
+                    <td><button onclick="diminuirVaga('vagasPreservacaoMO')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasPreservacaoMO')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Micropropagação vegetativa de mudas de batata e produção de minituberculos em sistema aeropônico</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasMicropropagação">96</td>
+                    <td><button onclick="diminuirVaga('vagasMicropropagação')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasMicropropagação')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Tetra Pak</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasTetraPak">17</td>
+                    <td><button onclick="diminuirVaga('vagasTetraPak')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasTetraPak')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Curytiba Biotec</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasCurytibaBiotec">12</td>
+                    <td><button onclick="diminuirVaga('vagasCurytibaBiotec')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasCurytibaBiotec')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Carreira Internacional em Bioinformática: Ampliando Fronteiras na Era da Análise de Dados Biológicos</td>
+                    <td>Quarta-feira</td>
+                    <td id="vagasCarreiraInternacional">96</td>
+                    <td><button onclick="diminuirVaga('vagasCarreiraInternacional')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasCarreiraInternacional')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Visita Técnica Frisia Moinho de Trigo</td>
+                    <td>Quinta-feira</td>
+                    <td id="vagasFrisia">12</td>
+                    <td><button onclick="diminuirVaga('vagasFrisia')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasFrisia')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Oficina de Bioinformática: construindo com códigos vivos</td>
+                    <td>Quinta-feira</td>
+                    <td id="vagasUTPrimers">15</td>
+                    <td><button onclick="diminuirVaga('vagasUTPrimers')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasUTPrimers')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Explorando Experiências de Estágio: Desafios e Aprendizados</td>
+                    <td>Quinta-feira</td>
+                    <td id="vagasEstágio">48</td>
+                    <td><button onclick="diminuirVaga('vagasEstágio')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasEstágio')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Metabolômica por Ressonância Magnética Nuclear de Hidrogênio (RMN 1H) como uma Ferramenta na Investigação de Produtos Naturais</td>
+                    <td>Quinta-feira</td>
+                    <td id="vagasMetabolomicaRMN">96</td>
+                    <td><button onclick="diminuirVaga('vagasMetabolomicaRMN')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasMetabolomicaRMN')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Introdução a cerveja artesanal</td>
+                    <td>Quinta-feira</td>
+                    <td id="vagasPetri">22</td>
+                    <td><button onclick="diminuirVaga('vagasPetri')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasPetri')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Explorando os Segredos do Gingerbeer: da história à Arte da Fermentação</td>
+                    <td>Sexta-feira</td>
+                    <td id="vagasFermentando">22</td>
+                    <td><button onclick="diminuirVaga('vagasFermentando')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasFermentando')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Produção de cosméticos</td>
+                    <td>Sexta-feira</td>
+                    <td id="vagasCosméticos">15</td>
+                    <td><button onclick="diminuirVaga('vagasCosméticos')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasCosméticos')">Voltar Vaga</button></td>
+                </tr>
+                <tr>
+                    <td>Porque os maiores venenos estão nos menores frascos!</td>
+                    <td>Sexta-feira</td>
+                    <td id="vagasVenenos">96</td>
+                    <td><button onclick="diminuirVaga('vagasVenenos')">Diminuir Vaga</button></td>
+                    <td><button onclick="voltarVaga('vagasVenenos')">Voltar Vaga</button></td>
+                </tr>
+            </table>
         </div>
-        <br>
-        <div class="group-checkbox" data-group="qua">
-            <h3>Quarta-feira</h3>
-            <label><input type="checkbox" id="quarta1" name="quarta"  linha="1" value="13" start="8" end="10" atividade="Segurança e acidentes nos laboratórios - 08:00/10:00h" cont="0">Segurança e acidentes nos laboratórios - Sabrina Ávila - 08:00/10:00h<br></label>
-            <label><input type="checkbox" id="quarta2" name="quarta"  linha="2" value="14" start="10.5" end="12" atividade="Roda de conversa sobre internacionalização - 10:30/12:00h" cont="0">Roda de conversa sobre internacionalização - 10:30/12:00h<br></label>
-            <label><input type="checkbox" id="quarta3" name="quarta"  linha="3" value="15" start="8" end="12" atividade="Visita técnica Porto Brazos - 08:00h/12:00h" cont="1">Visita técnica Porto Brazos - 08:00h/12:00h<br></label>
-            <label><input type="checkbox" id="quarta4" name="quarta"  linha="4" value="16" start="8" end="12" atividade="Visita técnica Heineken - 08:00h/12:00h" cont="1">Visita técnica Heineken - 08:00h/12:00h<br></label>
-            <label><input type="checkbox" id="quarta5" name="quarta"  linha="5" value="17" start="8.5" end="12" atividade="c3 - 08:30h/12:00h" cont="1">c3 - Fernando - 08:30h/12:00h<br></label>
-            <label><input type="checkbox" id="quarta6" name="quarta"  linha="6" value="18" start="9" end="12" atividade="Métodos de preservação de M.O. - 09:00h/12:00h" cont="1">Métodos de preservação de M.O. - 09:00h/12:00h<br></label>
-            <label><input type="checkbox" id="quarta7" name="quarta"  linha="7" value="19" start="12" end="18" atividade="Visita Técnica Curytiba Biotec - 12:00h/18:00h" cont="1">Visita Técnica Curytiba Biotec - 12:00h/18:00h<br></label>
-            <label><input type="checkbox" id="quarta8" name="quarta"  linha="8" value="20" start="13.5" end="15.5" atividade="Visita Técnica Tetra Pak - 13:30h/15:30h" cont="1">Visita Técnica Tetra Pak - 13:30h/15:30h<br></label>
-            <label><input type="checkbox" id="quarta9" name="quarta"  linha="9" value="21" start="13.5" end="15" atividade="Micropropagação vegetativa de mudas de batata e produção de minituberculos em sistema aeropônico - 13:30h/15:00h" cont="0">Micropropagação vegetativa de mudas de batata e produção de minituberculos em sistema aeropônico - 13:30h/15:00h<br></label>
-        </div>
-        <br>
-        <div class="group-checkbox" data-group="qui">
-            <h3>Quinta-feira</h3>
-            <label><input type="checkbox" id="quinta1" name="quinta" linha="1" value="22" start="8" end="10" atividade="Abelhas - 08:00h/10:00h" cont="0">Abelhas - 08:00h/10:00h<br></label>
-            <label><input type="checkbox" id="quinta2" name="quinta" linha="2" value="23" start="8" end="12" atividade="d1 - 08:00h/12:00h" cont="0">d1 - Fernando - 08:00h/12:00h<br></label>
-            <label><input type="checkbox" id="quinta3" name="quinta" linha="3" value="24" start="8.5" end="11" atividade="Visita Técnica Frísia Moinho de Trigo - 08:30h/11:00h" cont="1">Visita Técnica Frísia Moinho de Trigo - 08:30h/11:00h<br></label>
-            <label><input type="checkbox" id="quinta4" name="quinta" linha="4" value="25" start="10.5" end="12" atividade="Cálcio de algas marinhas: mercado e aplicações biotecnológicas - 10:30h/12:00h" cont="0">Cálcio de algas marinhas: mercado e aplicações biotecnológicas - Izabelle Almeida - 10:30h/12:00h<br></label>
-            <label><input type="checkbox" id="quinta5" name="quinta" linha="5" value="26" start="13.5" end="17.5" atividade="Minicurso cerveja - 13:30h/17:30h" cont="1">Minicurso cerveja - 13:30h/17:30h<br></label>
-            <label><input type="checkbox" id="quinta6" name="quinta" linha="6" value="27" start="15.5" end="17.5" atividade="UTPrimers - 15:30h/17:30h" cont="0">UTPrimers - 15:30h/17:30h<br></label>
-            <label><input type="checkbox" id="quinta8" name="quinta" linha="8" value="28" start="13.5" end="15" atividade="Aline - 13:30h/15:00h" cont="0">Aline - 13:30h/15:00h<br></label>
-            <label><input type="checkbox" id="quinta7" name="quinta" linha="7" value="29" start="15.5" end="17.5" atividade="Roda de conversa estágio - 15:30h/17:30h" cont="0">Roda de conversa estágio - 15:30h/17:30h<br></label>
-        </div>
-        <br>    
-        <div class="group-checkbox" data-group="sex">
-            <h3>Sexta-feira</h3>
-            <label><input type="checkbox" id="sexta1" name="sexta" linha="1" value="30" start="8" end="12" atividade="Visita técnica - 08:00h/12:00h" cont="1">Visita técnica- 08:00h/12:00h<br></label>
-            <label><input type="checkbox" id="sexta2" name="sexta" linha="2" value="31" start="8.5" end="12" atividade="Toxicologia. Porque os maiores venenos estão nos menores frascos! - 08:30h/12:00h" cont="0">Toxicologia. Porque os maiores venenos estão nos menores frascos! - Stella de Bortolli - 08:30h/12:00h<br></label>
-            <label><input type="checkbox" id="sexta3" name="sexta" linha="3" value="32" start="13.5" end="15.5" atividade="Mostra de trabalhos com momento cultural - 13:30h/15:30h" cont="0">Mostra de trabalhos com momento cultural - 13:30h/15:30h<br></label>
-        </div>
-        <button type="button" onclick="gerar()" id="gerador">Gerar PDF</button>
-    </div>
-    </body>
+    </main>
+    <script>
+        const vSenha = document.querySelector("#senha");
+        let senhaChamada = localStorage.getItem('senhaChamada');
+        let ultSenha = 'S';
+        var audio = new Audio('Chamada Senha.mp3');
+
+        if(!senhaChamada)
+            senhaChamada = 0
+
+        if(!ultSenha)
+            ultSenha = 'S'
+
+        mostrarSenha();
+
+        window.addEventListener('keydown', function(e){
+            if (e.key == 's' || e.key == 'S'){
+                senhaChamada++;
+                ultSenha = 'S';
+                audio.play();
+            } else if (e.key == 'r' || e.key == 'R'){
+                ultSenha = 'S';
+                senhaChamada = 0;
+            }
+
+            localStorage.setItem('senhaChamada', senhaChamada)
+            localStorage.setItem('ultSenha', ultSenha)
+
+            mostrarSenha();
+        });
+
+        function mostrarSenha() {
+            if (ultSenha == 'S'){
+                vSenha.innerHTML = 'S' + parseInt(senhaChamada).toLocaleString('pt-br', {minimumIntegerDigits: 3});
+            }
+        }
+
+        function diminuirVaga(id) {
+            const vagasElement = document.getElementById(id);
+            const vagasRestantes = parseInt(vagasElement.textContent);
+            
+            if (vagasRestantes > 1) {
+                vagasElement.textContent = vagasRestantes - 1;
+            } else if (vagasRestantes === 1) {
+                vagasElement.textContent = vagasRestantes - 1;
+                vagasElement.style.color = '#d00';
+            }
+        }
+
+        function voltarVaga(id) {
+            const vagasElement = document.getElementById(id);
+            const vagasRestantes = parseInt(vagasElement.textContent);
+            
+            if (vagasRestantes >= 1) {
+                vagasElement.textContent = vagasRestantes + 1;
+            } else if (vagasRestantes === 0) {
+                vagasElement.textContent = vagasRestantes + 1;
+                vagasElement.style.color = '#d00';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', restaurarVagas);
+    </script>
+</body>
 </html>
-
-<script>
-    
-</script>

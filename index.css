@@ -1,130 +1,47 @@
-body {
-	background-color: #d400ff46;
-	font-family: Arial, sans-serif;
-	text-align: center;
-  }
-  
-h1 {
-	color: #333;
-  }
-  
-button {
-	margin-top: 20px;
-	padding: 10px 20px;
-	background-color: #4caf50;
-	color: #000000;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-  }
-  
-button:hover {
-	background-color: #74ff7a;
-  }
-  
-button:active {
-	background-color: #3c903c;
-  }
-  
-.checkbox-group {
-	  margin-bottom: 10px;
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	}
-
-.icone {
-	margin-right: 95%;
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    height: 100px;
+    background-color: rgb(231, 75, 255);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.icone a:hover{
-	color: antiquewhite;
+main{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.menu {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: #64d3ff;
-	overflow-x: hidden;
-	transition: 0.5s;
-	padding-top: 60px;
-	}
-	
-.menu a {
-	padding: 8px 8px 8px 32px;
-	text-decoration: none;
-	font-size: 25px;
-	color: #ff4242;
-	display: block;
-	transition: 0.3s;
-	}
-	
-.menu a:hover {
-	color: #ffb9b9;
-	}
-	
-.menu .btnFechar {
-	position: absolute;
-	top: 0;
-	right: 25px;
-	font-size: 36px;
-	margin-left: 50px;
-	}
-	
-@media screen and (max-height: 450px) {
-	.menu {padding-top: 15px;}
-	.menu a {font-size: 18px;}
-	}
-
-/* Medium devices (tablets, 768px and up) */
-@media screen and (min-width: 768px) {
-	body {
-		font-size: 30px;
-	}
-	button {
-		font-size: 30px;
-	}
-	.menu {
-		font-size: 50px;
-	}
+.senha{
+    padding: 30px;
+    border: 2px solid rgb(231, 75, 255);
+    border-radius: 40px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 48px;
+    min-width: 300px;
 }
 
-/* Large devices (desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-	body {
-		font-size: 20px;
-	}
-	button {
-		font-size: 15px;
-	}
-	.menu {
-		font-size: 30px;
-	}
+#senha{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: rgb(231, 75, 255);
+    text-align: center;
 }
 
-table {
-	border-collapse: collapse;
-	width: 100%;
-	border: 1px solid #ddd;
-  }
+.tabela{
+    margin-top: 50px;
+    font-size: 12px;
+    padding-left: 30px;
+}
 
-  th, td {
-	border: 1px solid #ddd;
-	padding: 8px;
-	text-align: center;
-  }
-
-  .group-checkbox {
-    text-align: left; 
-  }
-
-  .group-checkbox label {
-    display: block;
-    margin-bottom: 5px;
-	margin-left: 5px;
-  }
-
+button{
+    font-size: 12px;
+}
